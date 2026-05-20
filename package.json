@@ -41,7 +41,6 @@
     "react-slick": "^0.30.2",
     "react-spinners": "0.13.8",
     "react-transition-group": "^4.4.5",
-    "react-wheel-of-prizes": "^1.1.0",
     "redux-persist": "6.0.0",
     "slick-carousel": "^1.8.1",
     "smooth-scrollbar": "^8.8.4",
