@@ -1,0 +1,250 @@
+/* Container chính */
+.paymentContainer {
+  margin-top: 30px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #064e3b;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.methodGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.guideText {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Thẻ lựa chọn phương thức */
+.methodOption {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.methodOption:hover {
+  border-color: #10b981;
+  background: #f0fdf4;
+  transform: translateY(-2px);
+}
+
+.methodOption.selected {
+  border-color: #10b981;
+  background: #ecfdf5;
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+}
+
+.methodOption input {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+  accent-color: #10b981;
+}
+
+.methodName {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1e293b;
+  display: block;
+}
+
+.methodDesc {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #10b981;
+  color: white;
+  padding: 4px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  border-bottom-left-radius: 12px;
+  text-transform: uppercase;
+}
+
+/* Nút đặt hàng */
+.btnCheckout {
+  height: 60px !important;
+  border-radius: 16px !important;
+  font-weight: 700 !important;
+  font-size: 17px !important;
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%) !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3) !important;
+  transition: all 0.3s !important;
+}
+
+.btnCheckout:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* ================= MODAL STYLES ================= */
+.paymentModal :global(.ant-modal-content) {
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modalBody {
+  display: flex;
+  min-height: 520px;
+}
+
+/* Cột trái (QR) */
+.leftCol {
+  flex: 4.5;
+  background: linear-gradient(180deg, #064e3b 0%, #065f46 100%);
+  padding: 40px 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.qrContainer {
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.qrImage {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.timerBox {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+}
+
+.timerValue {
+  font-size: 22px;
+  font-weight: 700;
+  color: #34d399;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Cột phải (Thông tin) */
+.rightCol {
+  flex: 5.5;
+  padding: 40px;
+  background: #fff;
+}
+
+.bankDetailBox {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 24px;
+}
+
+.fieldValueBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5f9;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-top: 6px;
+}
+
+.fieldValue {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.fieldValue.highlight {
+  color: #10b981;
+  font-size: 18px;
+}
+
+.warningBox {
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.warningBox .fieldValue {
+  color: #e11d48;
+}
+
+/* Success Screen */
+.successContainer {
+  padding: 60px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+}
+
+.successTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: #064e3b;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .modalBody {
+    flex-direction: column;
+  }
+  .leftCol {
+    padding: 30px 20px;
+  }
+  .rightCol {
+    padding: 30px 20px;
+  }
+}

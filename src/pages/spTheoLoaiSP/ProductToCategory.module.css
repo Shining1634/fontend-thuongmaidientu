@@ -1,0 +1,112 @@
+.pageWrapper {
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.breadcrumbArea {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 25px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filterBox {
+  margin-bottom: 25px;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d70018; /* Màu đỏ đặc trưng */
+  margin: 0;
+}
+
+.resetBtn {
+  color: #999;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.resetBtn:hover {
+  color: #d70018;
+}
+
+/* Category Header */
+.contentHeader {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.categoryTitle {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Form Item Custom */
+.priceForm :global(.ant-form-item-label > label) {
+  font-weight: 600;
+}
+
+.applyBtn {
+  background: #d70018 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  width: 100%;
+  font-weight: 700 !important;
+  height: 40px !important;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+}

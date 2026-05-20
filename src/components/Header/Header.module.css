@@ -1,0 +1,225 @@
+/* Container chuẩn 1600px cho màn hình rộng */
+.headerWrapper {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner khuyến mãi trên cùng */
+.topBanner {
+  background-color: #e9ecef;
+  padding: 5px 0;
+}
+
+.topBannerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.topBannerImg {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Main Header */
+.mainHeader {
+  background-color: #6EC2F7; /* Màu đỏ CellphoneS */
+  padding: 10px 0;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 42px;
+  transition: transform 0.3s;
+}
+
+.logo:hover img {
+  transform: scale(1.05);
+}
+
+/* Nút Danh mục */
+.categoryBtn {
+  background-color: hsla(0, 0%, 100%, 0.2);
+  padding: 8px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.3s;
+  position: relative;
+}
+
+.categoryBtn:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+/* Dropdown danh mục */
+.categoryMenu {
+  position: absolute;
+  top: 100%; /* Sửa lại 100% để menu sát với nút hơn, tránh khoảng hở làm mất hover */
+  left: 0;
+  background: #fff;
+  color: #333;
+  width: 240px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  z-index: 101;
+
+  /* Cấu hình để ẩn và tạo độ trễ khi tắt */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px); /* Hiệu ứng bay lên nhẹ cho đẹp */
+
+  /* Quan trọng: transition-delay cho visibility giúp menu giữ lại 0.3s trước khi biến mất */
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+/* Khi hover vào nút HOẶC hover vào chính menu */
+.categoryBtn:hover .categoryMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+
+  /* Khi hover vào thì hiện ngay lập tức (delay bằng 0) */
+  transition-delay: 0s;
+}
+
+/* Thêm một lớp đệm giả để lấp đầy khoảng trống giữa nút và menu */
+.categoryBtn::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px; /* Khoảng cách đệm giúp di chuột xuống menu không bị mất */
+  display: block;
+}
+.categoryItem {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.categoryItem:hover {
+  background: #f1f1f1;
+  color: #d70018;
+}
+
+/* Thanh tìm kiếm */
+.searchBox {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Các nhóm chức năng bên phải */
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actionItem {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 85px;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.actionItem:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+.actionIcon {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.actionLabel {
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: #facc15;
+  color: #000;
+  font-size: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+/* Cart Popup riêng biệt */
+.cartContainer {
+  position: relative;
+}
+
+.cartPopup {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 350px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  color: #333;
+  display: none;
+}
+
+.cartContainer:hover .cartPopup {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .categoryBtn span,
+  .actionLabel {
+    display: none;
+  }
+  .actionItem {
+    min-width: unset;
+  }
+}

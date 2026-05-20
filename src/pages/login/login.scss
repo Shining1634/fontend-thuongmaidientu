@@ -1,0 +1,59 @@
+.btn_Dnhap{
+    background-color: #d70018 !important;
+    font-weight: 500;
+}
+.custom-modal .ant-modal-header {
+    border-bottom: 2px solid #d70018;
+  }
+  
+  .custom-modal .ant-modal-title {
+    color: #d70018;
+    font-weight: bold;
+  }
+  
+  .custom-modal .ant-divider {
+    border-color: #d70018;
+  }
+  
+  .custom-modal .ant-form-item-label > label {
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .custom-modal .ant-input {
+    border-color: #d70018;
+    border-radius: 4px;
+    padding: 8px;
+  }
+  
+  .custom-modal .ant-input:focus,
+  .custom-modal .ant-input:hover {
+    border-color: #b30014;
+    box-shadow: 0 0 5px rgba(215, 0, 24, 0.3);
+  }
+  
+  .custom-modal .ant-btn {
+    border-radius: 4px;
+    padding: 5px 20px;
+  }
+  
+  .custom-modal .ant-btn-default {
+    border-color: #d70018;
+    color: #d70018;
+  }
+  
+  .custom-modal .ant-btn-default:hover {
+    background: #f8e6e8;
+    border-color: #b30014;
+    color: #b30014;
+  }
+  
+  .custom-modal .ant-btn-primary {
+    background: #d70018;
+    border-color: #d70018;
+  }
+  
+  .custom-modal .ant-btn-primary:hover {
+    background: #b30014;
+    border-color: #b30014;
+  }

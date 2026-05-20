@@ -1,0 +1,104 @@
+.checkoutPage {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.breadcrumbArea {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 1fr 480px; /* Bill rộng hơn một chút cho component Payment */
+  gap: 25px;
+  align-items: start;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #d70018;
+  margin-bottom: 20px !important;
+}
+
+.orderScroll {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.productItem {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+}
+
+.prodInfo {
+  flex: 1;
+}
+.prodName {
+  font-size: 14px;
+  display: block;
+}
+.prodMeta {
+  font-size: 12px;
+  color: #888;
+}
+
+.summaryBox {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 900;
+  color: #d70018;
+}
+
+/* Ép viền cho Input rõ ràng như bạn yêu cầu */
+.card :global(.ant-input),
+.card :global(.ant-input-number),
+.card :global(.ant-input-textarea) {
+  border: 1px solid #d9d9d9 !important;
+}
+
+.card :global(.ant-input:focus) {
+  border-color: #d70018 !important;
+  box-shadow: 0 0 0 2px rgba(215, 0, 24, 0.1) !important;
+}

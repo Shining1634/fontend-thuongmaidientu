@@ -1,0 +1,74 @@
+.searchWrapper {
+  width: 100%;
+  max-width: 600px; /* Độ rộng tối ưu cho thanh search */
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom lại Ant Design Search qua class bọc */
+.searchWrapper :global(.ant-input-group-wrapper) {
+  background: #ffffff;
+  border-radius: 50px; /* Bo tròn hoàn toàn */
+  padding: 4px;
+  border: 2px solid #f1f5f9;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.searchWrapper :global(.ant-input-group-wrapper):hover,
+.searchWrapper :global(.ant-input-group-wrapper-focused) {
+  border-color: #1068b9; /* Màu xanh Emerald */
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+}
+
+.searchWrapper :global(.ant-input) {
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 15px;
+  padding-left: 20px;
+  height: 40px;
+  color: #1e293b;
+}
+
+.searchWrapper :global(.ant-input)::placeholder {
+  color: #94a3b8;
+  font-style: italic;
+  transition: opacity 0.3s;
+}
+
+/* Nút Search bên phải */
+.searchWrapper :global(.ant-input-search-button) {
+  background: #1068b9 !important;
+  border: none !important;
+  border-radius: 50px !important; /* Bo tròn nút bên trong */
+  height: 40px !important;
+  padding: 0 25px !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700 !important;
+  margin-left: 5px;
+  transition: all 0.3s ease !important;
+}
+
+.searchWrapper :global(.ant-input-search-button):hover {
+  background: #1068b9 !important; /* Xanh đậm hơn khi hover */
+  transform: scale(1.02);
+}
+
+/* Hiệu ứng nhấp nháy cho thanh search khi gõ xong placeholder (giả lập cursor) */
+.typing {
+  border-right: 2px solid #1068b9;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Ẩn addon rác của bản cũ */
+.searchWrapper :global(.ant-input-group-addon) {
+  background: transparent !important;
+}

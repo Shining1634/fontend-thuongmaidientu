@@ -1,0 +1,108 @@
+.allProductPage {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+.breadcrumbArea {
+  background: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.filterGroup {
+  margin-bottom: 25px;
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #d70018; /* Màu đỏ đặc trưng */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Product Content Styling */
+.contentArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerActions {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.listTitle {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0;
+  color: #1f2937;
+}
+
+/* Price Input Custom */
+.priceForm :global(.ant-form-item-label > label) {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.applyBtn {
+  background: #d70018 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  width: 100%;
+  font-weight: 600 !important;
+}
+
+/* Checkbox Custom */
+.modernCheckbox :global(.ant-checkbox-checked .ant-checkbox-inner) {
+  background-color: #d70018;
+  border-color: #d70018;
+}
+
+.modernCheckbox :global(.ant-checkbox-wrapper:hover .ant-checkbox-inner) {
+  border-color: #d70018;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
