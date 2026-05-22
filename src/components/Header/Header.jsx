@@ -102,7 +102,7 @@ const Header = () => {
           {/* Logo */}
           <div className={styles.logo} onClick={() => navigate("/")}>
             <img
-              src="https://github.com/Shining1634/fontend-thuongmaidientu/blob/main/ok.png"
+              src="https://raw.githubusercontent.com/Shining1634/fontend-thuongmaidientu/refs/heads/main/ok.png"
               alt="logo"
             />
           </div>
